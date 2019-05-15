@@ -16,6 +16,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 /* Pligin files */
 require( 'classes/plugin.php' );
 require( 'classes/clinic-list.php' );
+require( 'classes/tag.php' );
 
 /* Run plugin */
 \IN_VC_Listring\Plugin::get(  __FILE__ );

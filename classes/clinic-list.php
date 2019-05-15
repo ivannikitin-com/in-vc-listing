@@ -23,7 +23,7 @@ class ClinicList
 	 */
 	public function __construct()
 	{
-		// Параметры постоянных ссылок
+		// Инициализация
 		add_action('init', array( $this, 'init') );
 	}
 	

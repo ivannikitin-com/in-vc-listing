@@ -15,7 +15,7 @@ class Plugin
 	/**
 	 * @const LANG Translations folder
 	 */
-	const LANG = '/languages';
+	const LANG = '/lang';
 	
     /**
      * @var Plugin
@@ -34,13 +34,17 @@ class Plugin
 	 */
 	private $file = '';	
 	
-	
 	/**
 	 * Список клиник
 	 * @var clinicList
 	 */
 	private $clinicList;		
 	
+	/**
+	 * Теги клиник
+	 * @var tag
+	 */
+	private $tag;
 
     /**
      * Gets the instance via lazy initialization (created on first usage)
@@ -63,7 +67,9 @@ class Plugin
 	{
 		$this->file = $pluginFile;
 		$this->dir = plugin_dir_path( $pluginFile );
+		$this->tag = new Tag();			// ВАЖНО! Таксономия использует слаг CPT, поэтому она должна регистироваться ДО CPT
 		$this->clinicList = new ClinicList();
+
 		
 		add_action( 'plugins_loaded', array( $this, 'loadTextDomain' ) );
 	}
