@@ -5,7 +5,7 @@
  */
 namespace IN_VC_Listring;
 
-class Tag
+class Tag extends BaseTaxonomy
 {
 	/**
 	 * @const Custom Post Type
@@ -18,38 +18,18 @@ class Tag
 	const SLUG = 'tag';
 	
 	/**
-	 * Теги клиник
-	 * @var tag
-	 */
-	private $slug;	
-
-	
-	/**
 	 * Constructor
 	 */
 	public function __construct()
 	{
-		$this->slug = ClinicList::SLUG . '/' . self::SLUG;
-		//$this->slug = self::SLUG;
-		
-		// Инициализация
-		add_action('init', array( $this, 'init') );
-		add_action( self::TAXONOMY . '_edit_form_fields', array( $this, 'tinyMCE' ), 10, 2);
+		parent::__construct();
+		$this->label = __( 'Описание тега', Plugin::TEXTDOMAIN );
 	}
 	
 	/**
-	 * Инициализация по хуку Init
+	 * Регистрация таксономии
 	 */
-	public function init()
-	{
-		// Регистрируем тип данных
-		$this->registerTaxonomy();
-	}	
-	
-	/**
-	 * Регистрация CPT
-	 */
-	private function registerTaxonomy()
+	protected function registerTaxonomy()
 	{
 		$labels = array(
 			'name'                       => _x( 'Теги', 'Taxonomy General Name', Plugin::TEXTDOMAIN ),
@@ -86,27 +66,10 @@ class Tag
 			'show_admin_column'          => true,
 			'show_in_nav_menus'          => true,
 			'show_tagcloud'              => true,
-			'query_var'					 => self::TAXONOMY,
+			'query_var'					 => static::TAXONOMY,
 			'rewrite'                    => $rewrite,
 			'show_in_rest'               => true,
 		);
-		register_taxonomy( self::TAXONOMY, array( ClinicList::CPT ), $args );
-	}
-	
-	public function tinyMCE( $term, $taxonomy )
-	{
-    ?>
-    <tr valign="top">
-        <th scope="row"><?php esc_html_e( 'Описание тега', Plugin::TEXTDOMAIN )?></th>
-        <td>
-            <?php wp_editor(html_entity_decode($term->description), 'description', array('media_buttons' => false)); ?>
-            <script>
-                jQuery(window).ready(function(){
-                    jQuery('label[for=description]').parent().parent().remove();
-                });
-            </script>
-        </td>
-    </tr>
-    <?php		
+		register_taxonomy( static::TAXONOMY, array( ClinicList::CPT ), $args );
 	}
 }

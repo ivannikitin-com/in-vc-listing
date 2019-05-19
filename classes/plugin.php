@@ -45,7 +45,13 @@ class Plugin
 	 * @var tag
 	 */
 	private $tag;
-
+	
+	/**
+	 * Регисоны клиник
+	 * @var region
+	 */
+	private $region;
+	
     /**
      * Gets the instance via lazy initialization (created on first usage)
 	 * @param string $pluginDir	plugin folder. Must be specified at the first call ! 
@@ -68,8 +74,8 @@ class Plugin
 		$this->file = $pluginFile;
 		$this->dir = plugin_dir_path( $pluginFile );
 		$this->tag = new Tag();			// ВАЖНО! Таксономия использует слаг CPT, поэтому она должна регистироваться ДО CPT
+		$this->tag = new Region();
 		$this->clinicList = new ClinicList();
-
 		
 		add_action( 'plugins_loaded', array( $this, 'loadTextDomain' ) );
 	}

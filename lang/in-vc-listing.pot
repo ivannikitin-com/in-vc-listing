@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: IN VC Listing\n"
-"POT-Creation-Date: 2019-05-15 20:14+0300\n"
-"PO-Revision-Date: 2019-05-15 20:14+0300\n"
+"POT-Creation-Date: 2019-05-19 10:54+0300\n"
+"PO-Revision-Date: 2019-05-19 10:54+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,6 +20,10 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: classes/base-taxonomy.php:38
+msgid "Описание"
+msgstr ""
 
 #: classes/clinic-list.php:45
 msgctxt "Post Type General Name"
@@ -71,7 +75,7 @@ msgstr ""
 msgid "Обновить клинику"
 msgstr ""
 
-#: classes/clinic-list.php:58 classes/tag.php:65
+#: classes/clinic-list.php:58 classes/region.php:45 classes/tag.php:45
 msgid "Просмотр"
 msgstr ""
 
@@ -83,7 +87,7 @@ msgstr ""
 msgid "Поиск клиник"
 msgstr ""
 
-#: classes/clinic-list.php:61 classes/tag.php:71
+#: classes/clinic-list.php:61 classes/region.php:51 classes/tag.php:51
 msgid "Не найдено"
 msgstr ""
 
@@ -131,82 +135,160 @@ msgstr ""
 msgid "Ветеринарные клиники"
 msgstr ""
 
-#: classes/tag.php:55
+#: classes/region.php:26
+msgid "Описание региона"
+msgstr ""
+
+#: classes/region.php:35
+msgctxt "Taxonomy General Name"
+msgid "Регионы"
+msgstr ""
+
+#: classes/region.php:36
+msgctxt "Taxonomy Singular Name"
+msgid "Регион"
+msgstr ""
+
+#: classes/region.php:37
+msgid "Регионы"
+msgstr ""
+
+#: classes/region.php:38
+msgid "Все регионы"
+msgstr ""
+
+#: classes/region.php:39
+msgid "Родительский регион"
+msgstr ""
+
+#: classes/region.php:40
+msgid "Родительский регион:"
+msgstr ""
+
+#: classes/region.php:41
+msgid "Название нового региона"
+msgstr ""
+
+#: classes/region.php:42
+msgid "Добавить новый регион"
+msgstr ""
+
+#: classes/region.php:43
+msgid "Редактировать"
+msgstr ""
+
+#: classes/region.php:44
+msgid "Обновить"
+msgstr ""
+
+#: classes/region.php:46
+msgid "Разделите регионы запятыми"
+msgstr ""
+
+#: classes/region.php:47
+msgid "Добавить или удалить регионы"
+msgstr ""
+
+#: classes/region.php:48
+msgid "Выберите из списка часто используемых регионов"
+msgstr ""
+
+#: classes/region.php:49
+msgid "Популярные регионы"
+msgstr ""
+
+#: classes/region.php:50
+msgid "Поиск регионов"
+msgstr ""
+
+#: classes/region.php:52
+msgid "Нет регионов"
+msgstr ""
+
+#: classes/region.php:53
+msgid "Список регионов"
+msgstr ""
+
+#: classes/region.php:54
+msgid "Навигация по списку регионов"
+msgstr ""
+
+#: classes/tag.php:26
+msgid "Описание тега"
+msgstr ""
+
+#: classes/tag.php:35
 msgctxt "Taxonomy General Name"
 msgid "Теги"
 msgstr ""
 
-#: classes/tag.php:56
+#: classes/tag.php:36
 msgctxt "Taxonomy Singular Name"
 msgid "Тег"
 msgstr ""
 
-#: classes/tag.php:57
+#: classes/tag.php:37
 msgid "Теги"
 msgstr ""
 
-#: classes/tag.php:58
+#: classes/tag.php:38
 msgid "Все теги"
 msgstr ""
 
-#: classes/tag.php:59
+#: classes/tag.php:39
 msgid "Родительский тег"
 msgstr ""
 
-#: classes/tag.php:60
+#: classes/tag.php:40
 msgid "Родительский тег:"
 msgstr ""
 
-#: classes/tag.php:61
+#: classes/tag.php:41
 msgid "Новый тег"
 msgstr ""
 
-#: classes/tag.php:62
+#: classes/tag.php:42
 msgid "Добавить тег"
 msgstr ""
 
-#: classes/tag.php:63
+#: classes/tag.php:43
 msgid "Редактировать тег"
 msgstr ""
 
-#: classes/tag.php:64
+#: classes/tag.php:44
 msgid "Обновить тег"
 msgstr ""
 
-#: classes/tag.php:66
+#: classes/tag.php:46
 msgid "Теги, разделенные запятыми"
 msgstr ""
 
-#: classes/tag.php:67
+#: classes/tag.php:47
 msgid "Добавить или удалить теги"
 msgstr ""
 
-#: classes/tag.php:68
+#: classes/tag.php:48
 msgid "Выберите из популярных тегов"
 msgstr ""
 
-#: classes/tag.php:69
+#: classes/tag.php:49
 msgid "Популярные теги"
 msgstr ""
 
-#: classes/tag.php:70
+#: classes/tag.php:50
 msgid "Поиск тегов"
 msgstr ""
 
-#: classes/tag.php:72
+#: classes/tag.php:52
 msgid "Нет тегов"
 msgstr ""
 
-#: classes/tag.php:73
+#: classes/tag.php:53
 msgid "Список тегов"
 msgstr ""
 
-#: classes/tag.php:74
+#: classes/tag.php:54
 msgid "Навигация по списку тегов"
-msgstr ""
-
-#: classes/tag.php:100
-msgid "Описание тега"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
