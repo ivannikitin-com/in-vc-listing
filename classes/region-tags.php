@@ -27,7 +27,7 @@ class RegionTags
 	public function addRewriteRules()
 	{
 		$regexp = '^' . ClinicList::SLUG . '/' . self::SLUG . '/(.?.+?)/' . Tag::SLUG . '/([^/]*)/?';
-		$url = 'index.php?' . Region::TAXONOMY . '=$matches[1]&' . Tag::TAXONOMY . ' =$matches[2]';
+		$url = 'index.php?' . Region::TAXONOMY . '=$matches[1]&' . Tag::TAXONOMY . '=$matches[2]';
 		add_rewrite_rule( $regexp, $url, 'top' );
 	}
 }

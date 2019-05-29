@@ -79,6 +79,7 @@ class Plugin
 	{
 		$this->file = $pluginFile;
 		$this->dir = plugin_dir_path( $pluginFile );
+		
 		$this->tag = new Tag();			// ВАЖНО! Таксономия использует слаг CPT, поэтому она должна регистироваться ДО CPT
 		$this->tag = new Region();
 		$this->tag = new RegionTags();
