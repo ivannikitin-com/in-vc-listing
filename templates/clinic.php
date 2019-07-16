@@ -18,7 +18,7 @@ get_header();
 			the_post();	?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			
-			<?php do_action('in_vc_listing_archive_before_entry', get_the_ID()); ?>
+			<?php do_action('in_vc_listing_clinic_before_entry', get_the_ID()); ?>
 			<header class="entry-header">
 				<h2><?php the_title() ?></h2>
 			</header><!-- .entry-header -->

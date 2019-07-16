@@ -3,7 +3,7 @@
  * Plugin Name: IN VC Listing
  * Plugin URI:  https://ivannikitin-com.github.io/inbi4wp/
  * Description: Список ветеринарных клиник и их систематизация
- * Version:     1.2
+ * Version:     1.3
  * Author:      Ivan Nikitin & Co.
  * Author URI:  https://ivannikitin.com/
  * License:     GPL2
