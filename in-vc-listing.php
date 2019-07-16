@@ -20,6 +20,7 @@ require( 'classes/base-taxonomy.php' );
 require( 'classes/tag.php' );
 require( 'classes/region.php' );
 require( 'classes/region-tags.php' );
+require( 'classes/template.php' );
 
 /* Run plugin */
 \IN_VC_Listring\Plugin::get(  __FILE__ );

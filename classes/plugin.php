@@ -47,10 +47,16 @@ class Plugin
 	private $tag;
 	
 	/**
-	 * Регисоны клиник
+	 * Регионы клиник
 	 * @var region
 	 */
 	private $region;
+
+	/**
+	 * Менеджер шаблонов
+	 * @var template
+	 */
+	private $template;
 	
 	/**
 	 * Выборка клиник по тегам в регионах
@@ -84,6 +90,7 @@ class Plugin
 		$this->tag = new Region();
 		$this->tag = new RegionTags();
 		$this->clinicList = new ClinicList();
+		$this->template = new Template();
 		
 		add_action( 'plugins_loaded', array( $this, 'loadTextDomain' ) );
 	}
