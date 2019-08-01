@@ -25,6 +25,7 @@ get_header();
 						echo get_the_post_thumbnail( get_the_ID(), 
 							apply_filters('in_vc_listing_archive_thumbnail_size', get_the_ID(), 'thumbnail')); ?>
 				<?php the_excerpt(); ?>
+				<?php do_action('in_vc_listing_archive_after_content', get_the_ID()); ?>
 			</div><!-- .entry-content -->
 <?php		do_action('in_vc_listing_archive_after_entry', get_the_ID());
 		}
