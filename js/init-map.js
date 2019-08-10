@@ -1,7 +1,7 @@
 /**
  * Инициализация карт
  */
-var map;	
+var map;
 document.addEventListener("DOMContentLoaded", function(event) {	
 	var minLat = in_vc_listing_map.points[0].lat,
 		maxLat = in_vc_listing_map.points[0].lat,

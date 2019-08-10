@@ -45,7 +45,7 @@ class Map
 		if ( $this->is_enabled() )
 		{
 			add_action( 'wp_enqueue_scripts', array( $this, 'loadJS' ) );
-			add_filter( 'script_loader_tag', array( $this, 'add_async_defer_attribute' ), 10, 2);
+			//add_filter( 'script_loader_tag', array( $this, 'add_async_defer_attribute' ), 10, 2);
 			
 			// Подключаем вывод карт к шаблонам
 			add_action( 'in_vc_listing_clinic_after_content', array( $this, 'show' ) );
